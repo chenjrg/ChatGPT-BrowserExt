@@ -16,4 +16,7 @@ jobs:
         run: |
           mkdir -p ${{ env.FIREFOX_OUTPUT_DIR }}
           cd ${{ env.FIREFOX_EXTENSION_DIR }}
-          zip -r ../${{ e
+          zip -r ../${{ env.FIREFOX_OUTPUT_DIR }}/firefox_${{ github.event.repository.name }}.xpi *
+        env:
+          FIREFOX_EXTENSION_DIR: "firefox"
+          FIREFOX_OUTPUT_DIR: "di
