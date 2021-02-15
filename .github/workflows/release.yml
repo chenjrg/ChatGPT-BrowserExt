@@ -10,4 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions
+        uses: actions/checkout@v2
+
+      - name: Build Firefox Extension
+        run: |
+          mkdir -p ${{ env.FIREFOX_OUTPUT_DIR }}
+          cd ${{ env.FIREFOX_EXTENSION_DIR }}
+          zip -r ../${{ e
