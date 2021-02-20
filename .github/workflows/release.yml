@@ -25,4 +25,9 @@ jobs:
         run: |
           mkdir -p ${{ env.CHROME_OUTPUT_DIR }}
           cd ${{ env.CHROME_EXTENSION_DIR }}
-          zip -r ../${
+          zip -r ../${{ env.CHROME_OUTPUT_DIR }}/chrome_${{ github.event.repository.name }}.zip *
+        env:
+          CHROME_EXTENSION_DIR: "chrome"
+          CHROME_OUTPUT_DIR: "dist/chrome"
+
+      - name: Get Ve
