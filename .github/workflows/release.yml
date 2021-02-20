@@ -19,4 +19,10 @@ jobs:
           zip -r ../${{ env.FIREFOX_OUTPUT_DIR }}/firefox_${{ github.event.repository.name }}.xpi *
         env:
           FIREFOX_EXTENSION_DIR: "firefox"
-          FIREFOX_OUTPUT_DIR: "di
+          FIREFOX_OUTPUT_DIR: "dist/firefox"
+
+      - name: Create Chrome Directory
+        run: |
+          mkdir -p ${{ env.CHROME_OUTPUT_DIR }}
+          cd ${{ env.CHROME_EXTENSION_DIR }}
+          zip -r ../${
