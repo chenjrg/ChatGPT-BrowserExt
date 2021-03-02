@@ -51,4 +51,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # C
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # Cela provient de l'étape de création de la Release
+          asset_path: ./dist/firefox/firefox_${{ github.event.repository.name }}.xpi
+          asset_name: Firefox_${{ github.event.re
