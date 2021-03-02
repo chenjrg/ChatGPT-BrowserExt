@@ -47,4 +47,8 @@ jobs:
           prerelease: false
 
       - name: Upload Firefox Extension to Release
-        uses: ac
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # C
