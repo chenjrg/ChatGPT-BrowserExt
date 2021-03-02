@@ -42,4 +42,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         with:
           tag_name: v${{ steps.package.outputs.version }}
-    
+          release_name: v${{ steps.package.outputs.version }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Firefox Extension to Release
+        uses: ac
