@@ -64,4 +64,4 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # Cela provient de l'étape de création de la Release
           asset_path: ./dist/chrome/chrome_${{ github.event.repository.name }}.zip
           asset_name: Chrome_${{ github.event.repository.name }}.zip
-          asset_conten
+          asset_content_type: application/zip
