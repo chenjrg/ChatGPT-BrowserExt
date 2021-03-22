@@ -1,2 +1,7 @@
 {
-    "manifest
+    "manifest_version": 3,
+    "name": "YoanDevGPT",
+    "version": "0.1.4",
+    "description": "Collection de prompts pour spécialiser les intéractions avec ChatGPT",
+    "action": {
+        "default_icon
