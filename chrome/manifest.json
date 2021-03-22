@@ -21,4 +21,10 @@
     },
     "permissions": ["storage", "activeTab", "contextMenus", "scripting"],
     "host_permissions": ["https://raw.githubusercontent.com/"],
-  
+    "options_page": "src/popup.html",
+    "background": {
+        "service_worker": "src/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all
