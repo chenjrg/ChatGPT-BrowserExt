@@ -27,4 +27,8 @@
     },
     "content_scripts": [
         {
-            "matches": ["<all
+            "matches": ["<all_urls>"],
+            "js": ["src/contentScript.js"]
+        }
+    ]
+}
