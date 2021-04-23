@@ -4,4 +4,7 @@ chrome.runtime.onInstalled.addListener(setup);
 chrome.runtime.onStartup.addListener(setup);
 
 function setup() {
-    // clear all context menus entries fir
+    // clear all context menus entries firstly
+    chrome.contextMenus.removeAll(function() {
+        chrome.storage.local.get('dataURL', data => {
+            let DATA_URL = data.dataURL || DEFAULT_DATA
