@@ -13,3 +13,7 @@ function setup() {
                 .then((response) => response.json())
                 .then((data) => {
                     data.forEach((item, index) => {
+                        chrome.contextMenus.create({
+                            id: index.toString(),
+                            title: item.title,
+                            context
