@@ -7,4 +7,9 @@ function setup() {
     // clear all context menus entries firstly
     chrome.contextMenus.removeAll(function() {
         chrome.storage.local.get('dataURL', data => {
-            let DATA_URL = data.dataURL || DEFAULT_DATA
+            let DATA_URL = data.dataURL || DEFAULT_DATA_URL;
+
+            fetch(DATA_URL)
+                .then((response) => response.json())
+                .then((data) => {
+                    data.forEach((item, index) => {
