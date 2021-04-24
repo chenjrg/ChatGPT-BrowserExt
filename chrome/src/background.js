@@ -22,4 +22,10 @@ function setup() {
                     });
                 });
 
-            chrome.contex
+            chrome.contextMenus.create({
+                id: "parent",
+                title: "YoanDevGPT",
+                contexts: ["editable"],
+            });
+
+            /
