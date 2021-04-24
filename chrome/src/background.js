@@ -28,4 +28,8 @@ function setup() {
                 contexts: ["editable"],
             });
 
-            /
+            // Create a context menu to reset URL to default
+            chrome.contextMenus.create({
+                id: "reset",
+                title: "Reset URL to default",
+         
