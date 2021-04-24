@@ -16,4 +16,10 @@ function setup() {
                         chrome.contextMenus.create({
                             id: index.toString(),
                             title: item.title,
-                            context
+                            contexts: ["editable"],
+                            parentId: "parent",
+                        });
+                    });
+                });
+
+            chrome.contex
