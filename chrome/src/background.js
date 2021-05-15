@@ -32,4 +32,11 @@ function setup() {
             chrome.contextMenus.create({
                 id: "reset",
                 title: "Reset URL to default",
-         
+                contexts: ["browser_action"],
+            });
+        });
+    });
+}
+
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+    chrome.storage.local.get('dataURL', da
