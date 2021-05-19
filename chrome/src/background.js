@@ -39,4 +39,10 @@ function setup() {
 }
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-    chrome.storage.local.get('dataURL', da
+    chrome.storage.local.get('dataURL', data => {
+        let DATA_URL = data.dataURL || DEFAULT_DATA_URL;
+
+        console.log(`URL de données actuelle : ${DATA_URL}`);
+
+        if (info.menuItemId === "reset") {
+       
