@@ -54,4 +54,8 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                 .then((response) => response.json())
                 .then((data) => {
                     const prompt = data[index].prompt;
-                    chrome.scr
+                    chrome.scripting.executeScript({
+                        target: { tabId: tab.id },
+                        function: setInputField,
+                        args: [prompt],
+      
