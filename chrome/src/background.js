@@ -58,4 +58,14 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                         target: { tabId: tab.id },
                         function: setInputField,
                         args: [prompt],
-      
+                    });
+                });
+        }
+    });
+});
+
+function setInputField(prompt) {
+    document.activeElement.value = prompt;
+}
+
+chrome.storage.onChanged.addListener(
