@@ -68,4 +68,11 @@ function setInputField(prompt) {
     document.activeElement.value = prompt;
 }
 
-chrome.storage.onChanged.addListener(
+chrome.storage.onChanged.addListener(function(changes) {
+    for (let key in changes) {
+        if (key === 'dataURL') {
+            setup();
+            break;
+        }
+    }
+});
