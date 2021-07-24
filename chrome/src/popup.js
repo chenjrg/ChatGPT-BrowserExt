@@ -5,4 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const messageElement = document.getElementById('message');
 
     // Load saved data url
-    chrome.storage.local.get(['dataURL'],
+    chrome.storage.local.get(['dataURL'], function (result) {
+        if (result.dataURL) {
+            dataUrlElement.value = result.dataURL;
+        }
+    });
+
+    optionsForm.addEventListener('submit', function (e) {
+        
