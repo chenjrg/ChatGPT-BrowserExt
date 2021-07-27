@@ -12,4 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     optionsForm.addEventListener('submit', function (e) {
-        
+        e.preventDefault();
+        // Save data url
+        chrome.storage.local.set({ dataURL: dataUrlElement.value }, function () {
+            messageElement.textContent = 'URL de données sauvegard
