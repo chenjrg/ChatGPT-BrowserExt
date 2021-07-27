@@ -15,4 +15,12 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         // Save data url
         chrome.storage.local.set({ dataURL: dataUrlElement.value }, function () {
-            messageElement.textContent = 'URL de données sauvegard
+            messageElement.textContent = 'URL de données sauvegardée.';
+        });
+        setTimeout(function () {
+            messageElement.textContent = '';
+            window.close();
+        }, 4000);
+    });
+
+    resetBtn.addEventListener('click', function () {
