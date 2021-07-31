@@ -24,3 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     resetBtn.addEventListener('click', function () {
+        // Remove the stored data url
+        chrome.storage.local.remove('dataURL', function () {
+            console.log('Data url cleared.');
+            dataUrlElement.va
