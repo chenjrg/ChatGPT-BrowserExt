@@ -27,4 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Remove the stored data url
         chrome.storage.local.remove('dataURL', function () {
             console.log('Data url cleared.');
-            dataUrlElement.va
+            dataUrlElement.value = '';
+            messageElement.textContent = "URL de données réinitialisée.";
+        });
+        // Clear the message and close the popup after 4 seconds
+        setTimeout(
