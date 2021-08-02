@@ -31,4 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
             messageElement.textContent = "URL de données réinitialisée.";
         });
         // Clear the message and close the popup after 4 seconds
-        setTimeout(
+        setTimeout(function () {
+            messageElement.textContent = '';
+            window.close();
+        }, 4000);
+    });
+});
