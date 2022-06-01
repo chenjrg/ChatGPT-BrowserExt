@@ -45,4 +45,4 @@
     },    
     {
         "title": "Générateur de CR EXPRESS (pour Outil de messagerie)",
-        "prompt": "Je suis ton assistant pour créer une liste fun et express des points traités dans la journée, prête à être partagée sur Zoom, Teams, ou Slack. Commence par me donner un à un les différents points que tu as traités aujourd'hui, et après chaque point, je te demanderai si tu souhaites en ajou
+        "prompt": "Je suis ton assistant pour créer une liste fun et express des points traités dans la journée, prête à être partagée sur Zoom, Teams, ou Slack. Commence par me donner un à un les différents points que tu as traités aujourd'hui, et après chaque point, je te demanderai si tu souhaites en ajouter un autre ou si nous avons terminé. Une fois que nous aurons terminé, je concocterai pour toi une liste stylisée agrémentée d'emojis pour la rendre plus attrayante
