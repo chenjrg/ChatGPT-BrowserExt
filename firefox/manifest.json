@@ -24,4 +24,14 @@
   "permissions": ["storage",
     "activeTab",
     "contextMenus",
-    "<all_urls
+    "<all_urls>"],
+  "background": {
+    "scripts": ["src/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/contentScript.js"]
+    }
+  ]
+}
