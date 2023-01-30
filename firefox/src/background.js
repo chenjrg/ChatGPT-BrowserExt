@@ -6,4 +6,9 @@ browser.runtime.onStartup.addListener(setup);
 function setup() {
     // clear all context menus entries firstly
     browser.contextMenus.removeAll().then(() => {
-        browser.storage.local.get('data
+        browser.storage.local.get('dataURL').then(data => {
+            let DATA_URL = data.dataURL || DEFAULT_DATA_URL;
+
+            fetch(DATA_URL)
+                .then((response) => response.json())
+                
