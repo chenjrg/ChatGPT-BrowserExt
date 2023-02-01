@@ -11,4 +11,8 @@ function setup() {
 
             fetch(DATA_URL)
                 .then((response) => response.json())
-                
+                .then((data) => {
+                    data.forEach((item, index) => {
+                        browser.contextMenus.create({
+                            id: index.toString(),
+        
