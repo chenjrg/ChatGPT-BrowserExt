@@ -15,4 +15,8 @@ function setup() {
                     data.forEach((item, index) => {
                         browser.contextMenus.create({
                             id: index.toString(),
-        
+                            title: item.title,
+                            contexts: ["editable"],
+                            parentId: "parent",
+                        });
+             
