@@ -26,4 +26,9 @@ function setup() {
                 id: "parent",
                 title: "YoanDevGPT",
                 contexts: ["editable"],
-    
+            });
+
+            // Create a context menu to reset URL to default
+            browser.contextMenus.create({
+                id: "reset",
+             
