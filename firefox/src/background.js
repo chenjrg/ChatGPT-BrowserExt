@@ -19,4 +19,11 @@ function setup() {
                             contexts: ["editable"],
                             parentId: "parent",
                         });
-             
+                    });
+                });
+
+            browser.contextMenus.create({
+                id: "parent",
+                title: "YoanDevGPT",
+                contexts: ["editable"],
+    
