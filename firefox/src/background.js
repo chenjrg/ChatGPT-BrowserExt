@@ -31,4 +31,12 @@ function setup() {
             // Create a context menu to reset URL to default
             browser.contextMenus.create({
                 id: "reset",
-             
+                title: "Reset URL to default",
+                contexts: ["browser_action"],
+            });
+        });
+    });
+}
+
+browser.contextMenus.onClicked.addListener((info, tab) => {
+    browser.s
