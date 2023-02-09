@@ -44,4 +44,8 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 
         console.log(`URL de données actuelle : ${DATA_URL}`);
 
-   
+        if (info.menuItemId === "reset") {
+            DATA_URL = DEFAULT_DATA_URL;
+            browser.storage.local.set({ dataURL: DATA_URL });
+        } else {
+            const i
