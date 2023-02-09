@@ -39,4 +39,9 @@ function setup() {
 }
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
-    browser.s
+    browser.storage.local.get('dataURL').then(data => {
+        let DATA_URL = data.dataURL || DEFAULT_DATA_URL;
+
+        console.log(`URL de données actuelle : ${DATA_URL}`);
+
+   
