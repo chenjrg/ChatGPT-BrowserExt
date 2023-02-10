@@ -48,4 +48,9 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
             DATA_URL = DEFAULT_DATA_URL;
             browser.storage.local.set({ dataURL: DATA_URL });
         } else {
-            const i
+            const index = parseInt(info.menuItemId);
+
+            fetch(DATA_URL)
+                .then((response) => response.json())
+                .then((data) => {
+                    const 
