@@ -57,4 +57,13 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
                     browser.tabs.executeScript(
                         tab.id,
                         {
-                            code: `document.activeEle
+                            code: `document.activeElement.value = "${prompt}";`
+                        }
+                    );
+                });
+        }
+    });
+});
+
+browser.storage.onChanged.addListener(function(changes) {
+  
