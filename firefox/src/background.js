@@ -53,4 +53,8 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
             fetch(DATA_URL)
                 .then((response) => response.json())
                 .then((data) => {
-                    const 
+                    const prompt = data[index].prompt;
+                    browser.tabs.executeScript(
+                        tab.id,
+                        {
+                            code: `document.activeEle
