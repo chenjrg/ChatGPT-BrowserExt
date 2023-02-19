@@ -66,4 +66,10 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 });
 
 browser.storage.onChanged.addListener(function(changes) {
-  
+    for (let key in changes) {
+        if (key === 'dataURL') {
+            setup();
+            break;
+        }
+    }
+});
