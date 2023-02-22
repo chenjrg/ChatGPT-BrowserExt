@@ -14,3 +14,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     optionsForm.addEventListener('submit', function (e) {
         e.preventDefault();
+        // Save data url
+        browser.storage.local.set({ dataURL: dataUrlElement.value }).then(function () {
+            messageElement.textContent = 'URL de données sauvegardée.';
+        });
+        setTimeout(function () {
+            messageElement.textContent = '';
+            window.close();
+        }, 4000);
+    });
+
+    resetBtn.addEventListener('click', function () {
+        // Remove the stored data url
+        browser.storage.local.remove('dataURL').then(function () {
+            console.log('Data url cleared.');
+            dataUrlElement.value = '';
+            messageElement.textContent = "URL de données réinitialisée.";
+        });
+        // Clear the message and close the popup after 4 seconds
+        setTimeout(function () {
+            messageElement.textContent = '';
+            window.close();
+        }, 4000);
+    });
+});
