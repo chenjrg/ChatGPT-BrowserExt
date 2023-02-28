@@ -11,4 +11,10 @@
     "OpenAI",
     "Prompts"
   ],
-  "author": "
+  "author": "YoanDev", 
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoanbernabeu/YoanDevGPT/issues" 
+  }, 
+  "homepage": "https://github.com/yoanbernabeu/YoanDevGPT#readme"
+}
